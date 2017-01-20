@@ -1,0 +1,9 @@
+{
+    "dev": {
+        "app_function": "manage.app", 
+        "s3_bucket": "zappa-jojl2kpxu",
+        "environment_variables": {
+            "env": "Development"
+        }
+    }
+}
