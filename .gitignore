@@ -1,0 +1,5 @@
+/.idea/*
+*.pyc
+
+.webassets-cache
+template_project/settings_local.py
