@@ -2,4 +2,4 @@
 *.pyc
 
 .webassets-cache
-template_project/settings_local.py
+basic_zappa_project/settings_local.py

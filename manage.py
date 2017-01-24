@@ -5,14 +5,14 @@ import sys
 from flask.ext.script import Manager, Shell, Server
 from flask.ext.migrate import MigrateCommand
 
-from template_project.app import create_app
-import template_project.models as models
-import template_project.settings
-from template_project.database import db
+from basic_zappa_project.app import create_app
+import basic_zappa_project.models as models
+import basic_zappa_project.settings
+from basic_zappa_project.database import db
 
 env = os.environ.get('env', 'Local')
 
-config_object = getattr(template_project.settings, env)
+config_object = getattr(basic_zappa_project.settings, env)
 app = create_app(config_object=config_object)
 
 HERE = os.path.abspath(os.path.dirname(__file__))

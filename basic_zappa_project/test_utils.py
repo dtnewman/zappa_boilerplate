@@ -4,9 +4,9 @@
 
 import unittest
 
-from template_project import settings
-from template_project.app import create_app
-from template_project.database import db_session, init_db, drop_db
+from basic_zappa_project import settings
+from basic_zappa_project.app import create_app
+from basic_zappa_project.database import db_session, init_db, drop_db
 
 
 class BaseTestCase(unittest.TestCase):

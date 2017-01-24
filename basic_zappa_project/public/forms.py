@@ -2,7 +2,7 @@ from flask_wtf import Form
 from wtforms import TextField, PasswordField
 from wtforms.validators import DataRequired
 
-from template_project.user.models import User
+from basic_zappa_project.user.models import User
 
 class LoginForm(Form):
     username = TextField('Username', validators=[DataRequired()])

@@ -4,7 +4,7 @@ import datetime
 from flask.ext.login import UserMixin
 import sqlalchemy
 
-from template_project.database import Base
+from basic_zappa_project.database import Base
 
 
 class User(Base, UserMixin):

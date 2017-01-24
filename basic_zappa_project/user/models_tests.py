@@ -1,7 +1,7 @@
 from sqlalchemy.exc import IntegrityError, InvalidRequestError
 
 import models
-from template_project.test_utils import BaseTestCase
+from basic_zappa_project.test_utils import BaseTestCase
 
 
 class TestAppointmentType(BaseTestCase):
