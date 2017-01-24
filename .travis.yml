@@ -14,3 +14,6 @@ before_script:
   - psql -c 'create database basic_zappa_project_test;' -U postgres
 
 script: "nosetests --with-coverage --cover-package=basic_zappa_project"
+
+after_success:
+  coveralls
