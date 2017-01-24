@@ -2,7 +2,7 @@
 basic_zappa_project
 ===================
 
-[![Build Status](https://travis-ci.org/dtnewman/basic_zappa_project.svg?branch=master)
+[![Build Status](https://travis-ci.org/dtnewman/basic_zappa_project.svg?branch=master)](https://travis-ci.org/dtnewman/basic_zappa_project)
     
 Code for a basic Flask application to be deployed with [Zappa](https://github.com/Miserlou/Zappa).
 
