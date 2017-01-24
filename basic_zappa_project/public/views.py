@@ -34,7 +34,7 @@ def home():
     return render_template("public/home.html", form=form)
 
 
-@blueprint.route('/logout/')
+@blueprint.route('/logout')
 @login_required
 def logout():
     logout_user()
@@ -42,7 +42,7 @@ def logout():
     return redirect(url_for('public.home'))
 
 
-@blueprint.route("/register/", methods=['GET', 'POST'])
+@blueprint.route("/register", methods=['GET', 'POST'])
 def register():
     form = RegisterForm(request.form, csrf_enabled=False)
     if form.validate_on_submit():
@@ -58,32 +58,14 @@ def register():
     return render_template('public/register.html', form=form)
 
 
-@blueprint.route("/about/")
+@blueprint.route("/about")
 def about():
     form = LoginForm(request.form)
     return render_template("public/about.html", form=form)
 
 
-@blueprint.route("/status/")
+@blueprint.route("/status")
 def status():
     return jsonify({'status': 'ok'})
 
-
-@blueprint.route("/version/")
-def version():
-    # 0.0.0 Started versioning. Costco app already setup and working, but just placeholders on homepage.
-    # 0.0.1 Cleaned up some code and added url_prefix to costco endpoint
-    # 0.0.2 Fixed bug for /Costco endpoint
-    # 0.0.3 Fixed bugs when filtering by active reservation, which was never evaluating to true
-    # 0.0.4 Update last_checked field when dropping bookings
-    # 0.0.5 Update requirements.txt
-    return jsonify({'status': 'ok',
-                    'major': 0,
-                    'minor': 0,
-                    'tiny':  5})
-
-
-@blueprint.route("/robots.txt")
-def robots():
-    return render_template("public/robots.txt",)
 
