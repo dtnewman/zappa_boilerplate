@@ -16,3 +16,8 @@ class TestViews(BaseTestCase):
     def test_home_get(self):
         response = self.client.get('/')
         self.assert200(response)
+
+    def test_register_get(self):
+        response = self.client.get('/register')
+        self.assert200(response)
+
