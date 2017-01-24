@@ -1,8 +1,10 @@
-===============================
-personal_homepage
-===============================
 
-Code for my personal site at [dtnewman.com](http://www.dtnewman.com)
+basic_zappa_project
+===================
+
+[![Build Status](https://travis-ci.org/dtnewman/basic_zappa_project.svg?branch=master)
+    
+Code for a basic Flask application to be deployed with [Zappa](https://github.com/Miserlou/Zappa).
 
 
 Quickstart

@@ -1,5 +1,7 @@
 /.idea/*
 *.pyc
 
+.coverage
+nosetests.xml
 .webassets-cache
 basic_zappa_project/settings_local.py
