@@ -1,1 +1,6 @@
+# This line below just tells github to skip the /static folder when trying 
+# to determine the language of this project (i.e. get it to ignore  all of 
+# the javascript and consider this a python project.). See:
+# https://github.com/github/linguist#troubleshooting
+
 basic_zappa_project/static/* linguist-vendored
