@@ -7,7 +7,7 @@ basic_zappa_project
 
 This repo is meant to demonstrate how to setup a **serverless** web application using [Flask](http://flask.pocoo.org/) and [Zappa](https://github.com/Miserlou/Zappa). I created a simple web application with a Postgres database that is meant to be a starting point for more complex projects.
 
-A demo of the deployed code (deployed using Zappa) can be found [here](https://auakxywz61.execute-api.us-east-1.amazonaws.com/dev/).
+A demo of the deployed code (deployed using Zappa) can be found [here](https://svvikpbodk.execute-api.us-east-1.amazonaws.com/dev/).
 
 Quickstart
 ----------
