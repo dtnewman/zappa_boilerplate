@@ -50,7 +50,7 @@ $ python manage.py runserver
 
 Then go to http://localhost:5000/ in your browser to test out the application running locally.
 
-**Step 5:** Deploy to Zappa:
+**Step 5:** Deploy to AWS using Zappa:
 
 Instructions coming soon...
 
