@@ -116,4 +116,4 @@ This project is simply meant to be boilerplate template to get you started, but 
 
 Acknowledgements
 ----------------
-The structure of this code borrows heavily from the [cookiecutter-flask](https://github.com/sloria/cookiecutter-flask) repo.
+The structure of this code borrows heavily from the [cookiecutter-flask](https://github.com/sloria/cookiecutter-flask) repo. And of course, it was inspired by the [Zappa](https://github.com/Miserlou/Zappa) project.
