@@ -4,13 +4,22 @@
 {% block content %}
 <div class="body-content">
     <div class="row">
-        <h2>Home</h2>
-        <p>
-            This cookiecutter was designed by <a href="https://github.com/dtnewman">Daniel Newman</a>. It borrows
-            heavily from the <a href="http://github.com/audreyr/cookiecutter/">cookiecutter</a> template designed by
-            <a href="http://github.com/sloria/">Steven Loria</a>
-        </p>
-
+        <div class="col-md-offset-2 col-md-8">
+            <h2>Home Page</h2>
+            <p>
+                This is a demo for the <i>basic_zappa_project</i> which can be found
+                <a href="https://github.com/dtnewman/basic_zappa_project">here</a> on GitHub.
+                This site is <b>"serverless"</b> and runs on AWS <a href="https://aws.amazon.com/lambda/">
+                Lambda</a> + <a href="https://aws.amazon.com/api-gateway/">API Gateway</a>. It uses the
+                <a href="https://github.com/Miserlou/Zappa">Zappa</a> library to make deployment easy. See the
+                <a href="{{ url_for('public.about') }}">about</a> page for more info.
+            </p>
+            <p>
+                This project was designed by <a href="https://github.com/dtnewman">Daniel Newman</a>. Feel free to
+                reach out to me with questions or comments. The best way to contact me is by filling out
+                <a href="https://www.dtnewman.com/contact_me.html">this form</a>.
+            </p>
+        </div>
     </div>
 </div>
 {% endblock %}
