@@ -2,8 +2,7 @@
 basic_zappa_project
 ===================
 
-[![Build Status](https://travis-ci.org/dtnewman/basic_zappa_project.svg?branch=master)](https://travis-ci.org/dtnewman/basic_zappa_project)
-[![Test Coverage](https://codecov.io/gh/dtnewman/basic_zappa_project/branch/master/graph/badge.svg)](https://codecov.io/gh/dtnewman/basic_zappa_project) 
+[![Build Status](https://travis-ci.org/dtnewman/basic_zappa_project.svg?branch=master)](https://travis-ci.org/dtnewman/basic_zappa_project) 
 [![Coverage Status](https://coveralls.io/repos/github/dtnewman/basic_zappa_project/badge.svg?branch=master)](https://coveralls.io/github/dtnewman/basic_zappa_project?branch=master)
 
 This repo is meant to demonstrate how to setup a **serverless** web application using [Flask](http://flask.pocoo.org/) and [Zappa](https://github.com/Miserlou/Zappa). I created a simple web application with a Postgres database that is meant to be a starting point for more complex projects.
@@ -50,7 +49,20 @@ $ python manage.py runserver
 
 Then go to http://localhost:5000/ in your browser to test out the application running locally.
 
-**Step 5:** Deploy to AWS using Zappa:
+**Step 5:** Run tests: 
+ 
+```bash
+$ python manage.py test
+```
+
+You can also run tests directly with [nose](http://nose.readthedocs.io):
+
+```bash
+nosetests
+```
+
+
+**Step 6:** Deploy to AWS using Zappa:
 
 Instructions coming soon...
 
