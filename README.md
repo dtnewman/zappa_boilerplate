@@ -111,7 +111,7 @@ $ zappa undeploy
 
 Advanced Features
 -----------------
-This project is simply meant to be boilerplate template to get you started, but Zappa has a bunch of cool features that I did not touch in this repo. Checkout the [Zappa](https://github.com/Miserlou/Zappa) repository for more cool features.
+This project is simply meant to be boilerplate template to get you started, but Zappa has a bunch of cool features that I did not touch in this repo. Checkout the [Zappa](https://github.com/Miserlou/Zappa) repository for a description of all of Zappa's features.
 
 
 Acknowledgements
