@@ -3,7 +3,7 @@ basic_zappa_project
 ===================
 
 [![Build Status](https://travis-ci.org/dtnewman/basic_zappa_project.svg?branch=master)](https://travis-ci.org/dtnewman/basic_zappa_project)
-[![Coverage Status](https://coveralls.io/repos/github/dtnewman/basic_zappa_project/badge.svg?branch=master)](https://coveralls.io/github/dtnewman/basic_zappa_project?branch=master) 
+[![codecov](https://codecov.io/gh/dtnewman/basic_zappa_project/branch/master/graph/badge.svg)](https://codecov.io/gh/dtnewman/basic_zappa_project) 
 
 This repo is meant to demonstrate how to setup a **serverless** web application using [Flask](http://flask.pocoo.org/) and [Zappa](https://github.com/Miserlou/Zappa). I created a simple web application with a Postgres database that is meant to be a starting point for more complex projects.
 
