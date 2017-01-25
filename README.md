@@ -92,7 +92,7 @@ You are now ready to deploy! To do so, simply run the command:
 $ zappa deploy 
 ```
 
-When the process finishes, it will give you the URL of your newly deployed project!
+When the process finishes, it will give you the URL of your newly deployed application!
 
 Making Changes 
 --------------
@@ -108,6 +108,10 @@ Undeploying your code is simple. Just run the following command:
 ```
 $ zappa undeploy 
 ```
+
+Advanced Features
+-----------------
+This project is simply meant to be boilerplate template to get you started, but Zappa has a bunch of cool features that I did not touch in this repo. Checkout the [Zappa](https://github.com/Miserlou/Zappa) repository for more cool features.
 
 
 Acknowledgements
