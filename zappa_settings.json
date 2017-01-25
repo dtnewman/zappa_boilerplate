@@ -4,6 +4,7 @@
         "s3_bucket": "zappa-jojl2kpxu",
         "environment_variables": {
             "env": "Development"
-        }
+        },
+        "remote_env": "s3://zappa-jojl2kpxu/config-secrets.json"
     }
 }
