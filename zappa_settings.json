@@ -1,10 +1,10 @@
 {
     "dev": {
         "app_function": "manage.app", 
-        "s3_bucket": "zappa-jojl2kpxu",
+        "s3_bucket": "basic-zappa-project-example-bucket",
         "environment_variables": {
             "env": "Development"
         },
-        "remote_env": "s3://zappa-jojl2kpxu/config_secrets.json"
+        "remote_env": "s3://basic-zappa-project-example-bucket/config_secrets.json"
     }
 }
