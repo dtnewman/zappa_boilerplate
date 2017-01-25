@@ -8,7 +8,7 @@ class Config(object):
     SECRET_KEY = os_env.get('PERSONAL_HOMEPAGE_SECRET', 'secret-key')  # used for csrf  TODO: Change me
     APP_DIR = os.path.abspath(os.path.dirname(__file__))  # This directory
     PROJECT_ROOT = os.path.abspath(os.path.join(APP_DIR, os.pardir))
-    BCRYPT_LOG_ROUNDS = 13
+    BCRYPT_LOG_ROUNDS = 12
     ASSETS_DEBUG = False
     DEBUG_TB_ENABLED = False  # Disable Debug toolbar
     DEBUG_TB_INTERCEPT_REDIRECTS = False
@@ -44,7 +44,7 @@ class Test(Config):
     TESTING = True
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get("DB_CONNECTION_STRING") or 'postgresql://localhost:5432/basic_zappa_project_test'
-    BCRYPT_LOG_ROUNDS = 1  # For faster tests
+    BCRYPT_LOG_ROUNDS = 4  # For faster tests
     WTF_CSRF_ENABLED = False  # Allows form testing
 
 # the file "settings_local.py" (which is ignored by git) can contain settings to run locally

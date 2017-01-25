@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import bcrypt
 import datetime
+import flask
 from flask.ext.login import UserMixin
 import sqlalchemy
 
@@ -39,7 +40,8 @@ class User(Base, UserMixin):
         return None
 
     def set_password(self, password):
-        self.password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt(14))
+        self.password = bcrypt.hashpw(password.encode('utf-8'),
+                                      bcrypt.gensalt(flask.current_app.config['BCRYPT_LOG_ROUNDS']))
 
     def check_password(self, value):
         return bcrypt.hashpw(value.encode('utf-8'), self.password.encode('utf-8')) == self.password
