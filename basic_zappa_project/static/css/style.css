@@ -25,6 +25,16 @@ textarea {
   max-width: 700px;
 }
 
+.btn-outline-gray {
+  border-color: #bababa;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.btn-outline-gray:hover {
+  background-color: #bababa;
+}
+
 /* Forms */
 
 .navbar-form input[type="text"],
