@@ -21,7 +21,6 @@ This is a work in progress... The steps below are not complete (or tested proper
 $ git clone git@github.com:dtnewman/basic_zappa_project.git
 $ cd basic_zappa_project
 $ pip install -r requirements.txt
-#
 ```
 
 **Step 2:** Create local and local test databases:
@@ -43,7 +42,7 @@ $ python manage.py db upgrade # apply initial migrations to the database
 
 See the [flask-Migrate docs](https://flask-migrate.readthedocs.io/en/latest/) for more details information on this step.
 
-**Step 4:** Run the application locally:
+**Step 4:** Run the application on a local server:
 
 ```bash
 $ python manage.py runserver
