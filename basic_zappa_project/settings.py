@@ -13,7 +13,6 @@ class Config(object):
     DEBUG_TB_ENABLED = False  # Disable Debug toolbar
     DEBUG_TB_INTERCEPT_REDIRECTS = False
     CACHE_TYPE = 'simple'  # Can be "memcached", "redis", etc.
-    FLASKS3_BUCKET_NAME = '<BUCKET NAME HERE>'  # TODO: Change me
 
 
 class Local(Config):

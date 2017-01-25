@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 '''The app module, containing the app factory function.'''
 from flask import Flask, render_template
-from flask_s3 import FlaskS3
 
 from basic_zappa_project.settings import Local
 from basic_zappa_project.extensions import (
@@ -12,8 +11,6 @@ from basic_zappa_project.extensions import (
 from basic_zappa_project.database import Base, init_engine
 from basic_zappa_project.assets import assets
 from basic_zappa_project import public, user
-
-s3 = FlaskS3()
 
 def create_app(config_object=Local):
     '''An application factory, as explained here:
@@ -35,7 +32,6 @@ def register_extensions(app):
     db.init_app(app)
     login_manager.init_app(app)
     migrate.init_app(app, Base)
-    s3.init_app(app)
     return None
 
 
