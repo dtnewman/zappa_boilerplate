@@ -47,12 +47,6 @@ textarea {
           box-sizing: border-box;
 }
 
-/* navbar */
-
-.navbar .navbar-brand {
-  padding-left: 0;
-}
-
 /* body */
 body .row {
   margin-left: 5px;
