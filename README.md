@@ -58,7 +58,7 @@ $ python manage.py test
 You can also run tests directly with [nose](http://nose.readthedocs.io):
 
 ```bash
-nosetests
+$ nosetests
 ```
 
 
