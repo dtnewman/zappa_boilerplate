@@ -12,9 +12,7 @@ A demo of the deployed code (deployed using Zappa) can be found [here](https://a
 Quickstart
 ----------
 
-This is a work in progress... The steps below are not complete (or tested properly) but will be soon!
-
-**Step 1:** Clone the repo and install requirements (you probably want to do this with a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/) with a name like *basic_zappa_project_venv*:
+**Step 1:** Clone the repo and install requirements (you probably want to do this with a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/) with a name like *basic_zappa_project_venv*):
 
 ```
 $ git clone git@github.com:dtnewman/basic_zappa_project.git
@@ -34,12 +32,12 @@ $ psql -c 'create database basic_zappa_project_test;' -U postgres
 This repo uses flask-Migrate to handle database migrations. The following commands will setup the initial database: 
 
 ```
-$ python manage.py db init    # this will add a migrations folder to your application
-$ python manage.py db migrate # run initial migrations
-$ python manage.py db upgrade # apply initial migrations to the database
+$ python manage.py db init     # this will add a migrations folder to your application
+$ python manage.py db migrate  # run initial migrations
+$ python manage.py db upgrade  # apply initial migrations to the database
 ```
 
-See the [flask-Migrate docs](https://flask-migrate.readthedocs.io/en/latest/) for more details information on this step.
+See the [flask-Migrate documentation](https://flask-migrate.readthedocs.io/en/latest/) for more details information on this step.
 
 **Step 4:** Run the application on a local server:
 
@@ -47,7 +45,7 @@ See the [flask-Migrate docs](https://flask-migrate.readthedocs.io/en/latest/) fo
 $ python manage.py runserver
 ```
 
-Then go to http://localhost:5000/ in your browser to test out the application running locally.
+Then go to [http://localhost:5000/](http://localhost:5000/) in your browser to test out the application running locally.
 
 **Step 5:** Run tests: 
  
