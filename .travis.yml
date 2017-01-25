@@ -16,4 +16,4 @@ before_script:
 script: "nosetests --with-coverage --cover-package=basic_zappa_project"
 
 after_success:
-  coveralls
+  bash <(curl -s https://codecov.io/bash)
