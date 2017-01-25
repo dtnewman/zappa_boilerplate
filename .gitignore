@@ -5,3 +5,4 @@
 nosetests.xml
 .webassets-cache
 basic_zappa_project/settings_local.py
+config_secrets.json
