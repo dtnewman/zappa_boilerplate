@@ -27,7 +27,7 @@ class Development(Config):
     """Development configuration."""
     ENV = 'dev'
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DB_CONNECTION_STRING") or '<DEVOLOPMENT DATABASE HERE>' # TODO: Change me
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DB_CONNECTION_STRING") or '<DEVELOPMENT DATABASE HERE>' # TODO: Change me
     FLASKS3_ACTIVE = True
     FLASKS3_DEBUG = True
 
