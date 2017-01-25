@@ -1,3 +1,5 @@
+import mock
+
 from basic_zappa_project.test_utils import BaseTestCase
 
 
@@ -19,5 +21,137 @@ class TestViews(BaseTestCase):
 
     def test_register_get(self):
         response = self.client.get('/register')
+        self.assert200(response)
+
+    @mock.patch("basic_zappa_project.public.views.flash")  # mocks out the calls to flash in views.py
+    @mock.patch("basic_zappa_project.utils.flash")  # mocks out the calls to flash (errors) in utils.py
+    def test_register_and_login(self, mock_flash_errors, mock_flash):
+        username = 'foo'
+        email = 'foo@example.com'
+        password = 'foobar'
+
+        register_form_data = {
+            'username': username,
+            'email': email,
+            'password': password,
+            'confirm': password
+        }
+
+        response = self.client.post('/register', data=register_form_data, follow_redirects=True)
+        self.assert200(response)
+
+        flash_calls = []
+        login_form_data = {
+            'username': username,
+            'password': 'wrong_password'
+        }
+
+        response = self.client.post('/', data=login_form_data, follow_redirects=True)
+        self.assert200(response)
+        flash_calls.append(mock.call('Password - Invalid password', 'warning'))
+
+        login_form_data = {
+            'username': 'unknown_username',
+            'password': password
+        }
+
+        response = self.client.post('/', data=login_form_data, follow_redirects=True)
+        self.assert200(response)
+        flash_calls.append(mock.call('Username - Unknown username', 'warning'))
+
+        mock_flash_errors.assert_has_calls(flash_calls)
+
+        login_form_data = {
+            'username': username,
+            'password': password
+        }
+
+        response = self.client.post('/', data=login_form_data, follow_redirects=True)
+        self.assert200(response)
+        mock_flash.assert_called_with('You are logged in.', 'success')
+
+    @mock.patch("basic_zappa_project.utils.flash")
+    def test_login_form_validation_error(self, mock_flash):
+        username = 'foo'
+
+        form_data = {
+            'username': username,
+            # 'password': 'password', <-- leaving this out will cause a form validation error
+        }
+
+        response = self.client.post('/', data=form_data, follow_redirects=True)
+        self.assert200(response)
+        mock_flash.assert_called_with('Password - This field is required.', 'warning')
+
+    @mock.patch("basic_zappa_project.utils.flash")
+    def test_register_error(self, mock_flash):
+        username = 'foo'
+        email = 'foo@example.com'
+        password = 'foobar'
+
+        form_data = {
+            'username': username,
+            'email': email,
+            'password': password,
+            # 'confirm': password <-- leaving this out will cause a form verification error
+        }
+
+        response = self.client.post('/register', data=form_data, follow_redirects=True)
+        self.assert200(response)
+        mock_flash.assert_called_with('Verify password - This field is required.', 'warning')
+
+    @mock.patch("basic_zappa_project.utils.flash")
+    def test_register_username_twice(self, mock_flash):
+        username = 'foo'
+        email1 = 'foo1@example.com'
+        email2 = 'foo2@example.com'
+        password = 'foobar'
+
+        form_data = {
+            'username': username,
+            'email': email1,
+            'password': password,
+            'confirm': password
+        }
+
+        response = self.client.post('/register', data=form_data, follow_redirects=True)
+        self.assert200(response)
+
+        form_data['email'] = email2
+        response = self.client.post('/register', data=form_data, follow_redirects=True)
+        self.assert200(response)
+        mock_flash.assert_called_with('Username - Username already registered', 'warning')
+
+    @mock.patch("basic_zappa_project.utils.flash")
+    def test_register_email_twice(self, mock_flash):
+        username1 = 'foo1'
+        username2 = 'foo2'
+        email = 'foo@example.com'
+        password = 'foobar'
+
+        form_data = {
+            'username': username1,
+            'email': email,
+            'password': password,
+            'confirm': password
+        }
+
+        response = self.client.post('/register', data=form_data, follow_redirects=True)
+        self.assert200(response)
+
+        form_data['username'] = username2
+        response = self.client.post('/register', data=form_data, follow_redirects=True)
+        self.assert200(response)
+        mock_flash.assert_called_with('Email - Email already registered', 'warning')
+
+    def test_not_found_error(self):
+        response = self.client.get('/invalid_url')
+        self.assert404(response)
+
+    def test_logout(self):
+        response = self.client.get('/logout')
+        self.assertStatus(response, 302)
+
+        response = self.client.get('/logout', follow_redirects=True)
         self.assert200(response)
 
