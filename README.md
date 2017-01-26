@@ -1,9 +1,9 @@
 
-basic_zappa_project
+zappa_boilerplate
 ===================
 
-[![Build Status](https://travis-ci.org/dtnewman/basic_zappa_project.svg?branch=master)](https://travis-ci.org/dtnewman/basic_zappa_project) 
-[![Coverage Status](https://coveralls.io/repos/github/dtnewman/basic_zappa_project/badge.svg?branch=master)](https://coveralls.io/github/dtnewman/basic_zappa_project?branch=master)
+[![Build Status](https://travis-ci.org/dtnewman/zappa_boilerplate.svg?branch=master)](https://travis-ci.org/dtnewman/zappa_boilerplate) 
+[![Coverage Status](https://coveralls.io/repos/github/dtnewman/zappa_boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dtnewman/zappa_boilerplate?branch=master)
 
 This repo is meant to demonstrate how to setup a **serverless** web application using [Flask](http://flask.pocoo.org/) and [Zappa](https://github.com/Miserlou/Zappa). I created a simple web application with a Postgres database that is meant to be a starting point for more complex projects.
 
@@ -12,19 +12,19 @@ This repo is meant to demonstrate how to setup a **serverless** web application 
 Quickstart
 ----------
 
-**Step 1:** Clone the repo and install requirements (you probably want to do this inside of a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/) with a name like *basic_zappa_project_venv*):
+**Step 1:** Clone the repo and install requirements (you probably want to do this inside of a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/) with a name like *zappa_boilerplate_venv*):
 
 ```
-$ git clone git@github.com:dtnewman/basic_zappa_project.git
-$ cd basic_zappa_project
+$ git clone git@github.com:dtnewman/zappa_boilerplate.git
+$ cd zappa_boilerplate
 $ pip install -r requirements.txt
 ```
 
 **Step 2:** Create local and local test databases:
 
 ```
-$ psql -c 'create database basic_zappa_project;' -U postgres
-$ psql -c 'create database basic_zappa_project_test;' -U postgres
+$ psql -c 'create database zappa_boilerplate;' -U postgres
+$ psql -c 'create database zappa_boilerplate_test;' -U postgres
 ```
 
 **Step 3:** Setup the local database

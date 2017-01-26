@@ -3,9 +3,9 @@
 
 from flask_testing import TestCase
 
-from basic_zappa_project import settings
-from basic_zappa_project.app import create_app
-from basic_zappa_project.database import db_session, init_db, drop_db
+from zappa_boilerplate import settings
+from zappa_boilerplate.app import create_app
+from zappa_boilerplate.database import db_session, init_db, drop_db
 
 APP = None
 

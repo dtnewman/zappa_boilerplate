@@ -1,10 +1,10 @@
 {
     "dev": {
         "app_function": "manage.app", 
-        "s3_bucket": "basic-zappa-project-example-bucket",
+        "s3_bucket": "zappa-boilerplate-example-bucket",
         "environment_variables": {
             "env": "Development"
         },
-        "remote_env": "s3://basic-zappa-project-example-bucket/config_secrets.json"
+        "remote_env": "s3://zappa-boilerplate-example-bucket/config_secrets.json"
     }
 }

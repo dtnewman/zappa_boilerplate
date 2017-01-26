@@ -11,9 +11,9 @@ addons:
 install: pip install -r requirements.txt
 
 before_script:
-  - psql -c 'create database basic_zappa_project_test;' -U postgres
+  - psql -c 'create database zappa_boilerplate_test;' -U postgres
 
-script: "nosetests --with-coverage --cover-package=basic_zappa_project"
+script: "nosetests --with-coverage --cover-package=zappa_boilerplate"
 
 after_success:
   coveralls

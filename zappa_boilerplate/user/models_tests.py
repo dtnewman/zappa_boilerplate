@@ -1,7 +1,7 @@
 from sqlalchemy.exc import IntegrityError
 
-import basic_zappa_project.user.models as models
-from basic_zappa_project.test_utils import BaseTestCase
+import zappa_boilerplate.user.models as models
+from zappa_boilerplate.test_utils import BaseTestCase
 
 
 class TestUser(BaseTestCase):

@@ -5,14 +5,14 @@ import sys
 from flask.ext.script import Manager, Shell, Server
 from flask.ext.migrate import MigrateCommand
 
-from basic_zappa_project.app import create_app
-import basic_zappa_project.models as models
-import basic_zappa_project.settings
-from basic_zappa_project.database import db
+from zappa_boilerplate.app import create_app
+import zappa_boilerplate.models as models
+import zappa_boilerplate.settings
+from zappa_boilerplate.database import db
 
 env = os.environ.get('env', 'Local')
 
-config_object = getattr(basic_zappa_project.settings, env)
+config_object = getattr(zappa_boilerplate.settings, env)
 app = create_app(config_object=config_object)
 
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -30,7 +30,7 @@ def _make_context():
 @manager.command
 def test():
     import subprocess
-    command = 'nosetests --cover-erase --with-xunit --with-coverage --cover-package=basic_zappa_project'.split(' ')
+    command = 'nosetests --cover-erase --with-xunit --with-coverage --cover-package=zappa_boilerplate'.split(' ')
     return subprocess.call(command)
 
 manager.add_command('server', Server())

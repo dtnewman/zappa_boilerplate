@@ -5,7 +5,7 @@ import flask
 from flask.ext.login import UserMixin
 import sqlalchemy
 
-from basic_zappa_project.database import Base
+from zappa_boilerplate.database import Base
 
 
 class User(Base, UserMixin):

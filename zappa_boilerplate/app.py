@@ -2,15 +2,15 @@
 '''The app module, containing the app factory function.'''
 from flask import Flask, render_template
 
-from basic_zappa_project.settings import Local
-from basic_zappa_project.extensions import (
+from zappa_boilerplate.settings import Local
+from zappa_boilerplate.extensions import (
     db,
     login_manager,
     migrate,
 )
-from basic_zappa_project.database import Base, init_engine
-from basic_zappa_project.assets import assets
-from basic_zappa_project import public, user
+from zappa_boilerplate.database import Base, init_engine
+from zappa_boilerplate.assets import assets
+from zappa_boilerplate import public, user
 
 def create_app(config_object=Local):
     '''An application factory, as explained here:

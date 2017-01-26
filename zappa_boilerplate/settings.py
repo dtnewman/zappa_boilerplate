@@ -19,7 +19,7 @@ class Local(Config):
     """Local configuration."""
     ENV = 'lcl'
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DB_CONNECTION_STRING") or 'postgresql://localhost:5432/basic_zappa_project'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DB_CONNECTION_STRING") or 'postgresql://localhost:5432/zappa_boilerplate'
 
 
 class Development(Config):
@@ -42,7 +42,7 @@ class Production(Config):
 class Test(Config):
     TESTING = True
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DB_CONNECTION_STRING") or 'postgresql://localhost:5432/basic_zappa_project_test'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DB_CONNECTION_STRING") or 'postgresql://localhost:5432/zappa_boilerplate_test'
     BCRYPT_LOG_ROUNDS = 4  # For faster tests
     WTF_CSRF_ENABLED = False  # Allows form testing
 

@@ -1,4 +1,4 @@
-from basic_zappa_project.database import db_session
+from zappa_boilerplate.database import db_session
 from flask_wtf import Form
 from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired, Email, EqualTo, Length
