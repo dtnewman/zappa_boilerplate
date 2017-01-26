@@ -66,7 +66,7 @@ $ nosetests
 
 First you will need to setup a hosted Postgres database for persistent storage. [ElephantSQL](https://www.elephantsql.com/) and [Heroku](https://www.heroku.com/postgres) both have free tiers for setting up databases with fairly small size limits (but enough to get started). Once you have that setup, you will need to get the database connection string (typically in the format *<postgresql://user:secret@host/db_name>*) from the hosting service.
 
-Next you will need to setup a bucket with a name of your choice on S3 (I used "basic-zappa-project-example-bucket" for mine. You'll need to choose a bucket name that isn't taken). This can be done with the [AWS command line interface](https://aws.amazon.com/cli/) with the following command:
+Next you will need to setup a bucket with a name of your choice on S3 (I used "zappa-boilerplate-example-bucket" for mine. You'll need to choose a bucket name that isn't taken). This can be done with the [AWS command line interface](https://aws.amazon.com/cli/) with the following command:
 
 ```
 $ aws s3 mb s3://your-bucket-name
