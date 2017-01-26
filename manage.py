@@ -30,7 +30,7 @@ def _make_context():
 @manager.command
 def test():
     import subprocess
-    command = 'nosetests --with-xunit --with-coverage --cover-package=basic_zappa_project --cover-erase'.split(' ')
+    command = 'nosetests --cover-erase --with-xunit --with-coverage --cover-package=basic_zappa_project'.split(' ')
     return subprocess.call(command)
 
 manager.add_command('server', Server())
