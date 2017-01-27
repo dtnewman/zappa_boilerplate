@@ -3,6 +3,4 @@
 # the javascript and consider this a python project.). See:
 # https://github.com/github/linguist#troubleshooting
 
-zappa_boilerplate/static/libs/* linguist-vendored
-zappa_boilerplate/static/css/common.css linguist-vendored
-zappa_boilerplate/static/js/common.js linguist-vendored
+zappa_boilerplate/static/* linguist-vendored
