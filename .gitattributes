@@ -3,4 +3,4 @@
 # the javascript and consider this a python project.). See:
 # https://github.com/github/linguist#troubleshooting
 
-basic_zappa_project/static/* linguist-vendored
+basic_zappa_project/static/libs/* linguist-vendored
