@@ -4,3 +4,5 @@
 # https://github.com/github/linguist#troubleshooting
 
 basic_zappa_project/static/libs/* linguist-vendored
+basic_zappa_project/static/css/common.css linguist-vendored
+basic_zappa_project/static/js/common.js linguist-vendored
