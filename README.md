@@ -1,5 +1,5 @@
 
-zappa_boilerplate
+Zappa Boilerplate
 ===================
 
 [![Build Status](https://travis-ci.org/dtnewman/zappa_boilerplate.svg?branch=master)](https://travis-ci.org/dtnewman/zappa_boilerplate) 
