@@ -7,7 +7,7 @@ Zappa Boilerplate
 
 This repo is meant to demonstrate how to setup a **serverless** web application using [Flask](http://flask.pocoo.org/) and [Zappa](https://github.com/Miserlou/Zappa). The code here is a "boilerplate" template for a simple web application with a Postgres database that is meant to be a starting point for more complex projects.
 
-[Click here](https://u7qxl040d3.execute-api.us-east-1.amazonaws.com/dev/) to see a demo of the deployed code (deployed using Zappa).
+[Click here](https://588kzkquxd.execute-api.us-east-1.amazonaws.com/dev/) to see a demo of the deployed code (deployed using Zappa).
 
 Quickstart
 ----------
