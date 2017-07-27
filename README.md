@@ -23,8 +23,8 @@ $ pip install -r requirements.txt
 **Step 2:** Create local and local test databases:
 
 ```
-$ psql -c 'create database zappa_boilerplate;' -U postgres
-$ psql -c 'create database zappa_boilerplate_test;' -U postgres
+$ psql -c 'create database zappa_boilerplate;'
+$ psql -c 'create database zappa_boilerplate_test;'
 ```
 
 **Step 3:** Setup the local database
