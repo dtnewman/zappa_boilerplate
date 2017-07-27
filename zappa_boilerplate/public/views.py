@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-'''Public section, including homepage and signup.'''
+"""Public section, including homepage and signup."""
 from flask import (Blueprint, request, render_template, flash, url_for,
                     redirect, session, jsonify)
 from flask.ext.login import login_user, login_required, logout_user

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from zappa_boilerplate.database import db_session
 from flask_wtf import Form
 from wtforms import StringField, PasswordField

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from sqlalchemy.exc import IntegrityError
 
 import zappa_boilerplate.user.models as models

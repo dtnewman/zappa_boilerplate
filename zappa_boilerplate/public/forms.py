@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
 from flask_wtf import Form
 from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired
 
 from zappa_boilerplate.user.models import User
+
 
 class LoginForm(Form):
     username = StringField('Username', validators=[DataRequired()])

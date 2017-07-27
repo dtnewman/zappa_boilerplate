@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
-'''The users module.'''
+"""The users module."""
 
 from . import views

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import mock
 
 from zappa_boilerplate.test_utils import BaseTestCase

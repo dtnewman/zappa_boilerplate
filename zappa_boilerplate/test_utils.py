@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-'''Helper utilities for testing.'''
+"""Helper utilities for testing."""
 
 from flask_testing import TestCase
 

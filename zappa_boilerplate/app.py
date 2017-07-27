@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-'''The app module, containing the app factory function.'''
+"""The app module, containing the app factory function."""
 from flask import Flask, render_template
 
 from zappa_boilerplate.settings import Local
@@ -13,11 +13,12 @@ from zappa_boilerplate.assets import assets
 from zappa_boilerplate import public, user
 
 def create_app(config_object=Local):
-    '''An application factory, as explained here:
-        http://flask.pocoo.org/docs/patterns/appfactories/
+    """
+    An application factory, as explained here:
+    http://flask.pocoo.org/docs/patterns/appfactories/
 
     :param config_object: The configuration object to use.
-    '''
+    """
     app = Flask(__name__.split('.')[0])
     app.config.from_object(config_object)
     init_engine(app.config['SQLALCHEMY_DATABASE_URI'])
