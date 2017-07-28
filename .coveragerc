@@ -1,4 +1,3 @@
 # Settings for the coverage package (which handles code coverage in tests)
 [report]
 show_missing = True
-
