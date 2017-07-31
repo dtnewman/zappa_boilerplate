@@ -15,9 +15,6 @@ env = os.environ.get('env', 'Local')
 config_object = getattr(zappa_boilerplate.settings, env)
 app = create_app(config_object=config_object)
 
-HERE = os.path.abspath(os.path.dirname(__file__))
-TEST_PATH = os.path.join(HERE, 'tests')
-
 manager = Manager(app)
 
 
