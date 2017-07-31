@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import bcrypt
 import datetime
 import flask
@@ -33,7 +32,7 @@ class User(Base, UserMixin):
     @classmethod
     def get_by_id(cls, session, user_id):
         if any(
-            (isinstance(user_id, basestring) and user_id.isdigit(),
+            (isinstance(user_id, str) and user_id.isdigit(),
              isinstance(user_id, (int, float))),
         ):
             return session.query(cls).filter(cls.id == user_id).first()
@@ -41,10 +40,10 @@ class User(Base, UserMixin):
 
     def set_password(self, password):
         self.password = bcrypt.hashpw(password.encode('utf-8'),
-                                      bcrypt.gensalt(flask.current_app.config['BCRYPT_LOG_ROUNDS']))
+                                      bcrypt.gensalt(flask.current_app.config['BCRYPT_LOG_ROUNDS'])).decode('utf-8')
 
     def check_password(self, value):
-        return bcrypt.hashpw(value.encode('utf-8'), self.password.encode('utf-8')) == self.password
+        return bcrypt.checkpw(value.encode('utf-8'), self.password.encode('utf-8'))
 
     def __repr__(self):
         return '<User({username!r})>'.format(username=self.username)
