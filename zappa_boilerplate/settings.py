@@ -44,9 +44,3 @@ class Test(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DB_CONNECTION_STRING") or 'postgresql://localhost:5432/zappa_boilerplate_test'
     BCRYPT_LOG_ROUNDS = 4  # For faster tests
     WTF_CSRF_ENABLED = False  # Allows form testing
-
-# the file "settings_local.py" (which is ignored by git) can contain settings to run locally
-try:
-    from settings_local import *
-except ImportError:
-    pass
