@@ -7,12 +7,15 @@ from flask.ext.migrate import MigrateCommand
 
 from zappa_boilerplate.app import create_app
 import zappa_boilerplate.models as models
-import zappa_boilerplate.settings
 from zappa_boilerplate.database import db
+try:
+    import zappa_boilerplate.settings_local as settings
+except ImportError:
+    import zappa_boilerplate.settings as settings
 
 env = os.environ.get('env', 'Local')
 
-config_object = getattr(zappa_boilerplate.settings, env)
+config_object = getattr(settings, env)
 app = create_app(config_object=config_object)
 
 manager = Manager(app)

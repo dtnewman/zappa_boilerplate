@@ -4,4 +4,5 @@
 .coverage
 nosetests.xml
 .webassets-cache
+*/settings_local.py
 config_secrets.json
