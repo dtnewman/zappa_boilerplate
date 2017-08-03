@@ -1,8 +1,20 @@
-/.idea/*
+
 *.pyc
 
+# testing files
 .coverage
 nosetests.xml
+
+# cache files
 .webassets-cache
+
+# compiled assets
+/zappa_boilerplate/static/css/common.css
+/zappa_boilerplate/static/js/common.js
+
+# pycharm files
+/.idea/*
+
+# files that might contain secrets
 */settings_local.py
 config_secrets.json
