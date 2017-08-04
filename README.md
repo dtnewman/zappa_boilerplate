@@ -9,6 +9,10 @@ This repo is meant to demonstrate how to setup a **serverless** web application 
 
 [Click here](https://588kzkquxd.execute-api.us-east-1.amazonaws.com/dev/) to see a demo of the deployed code (deployed using Zappa).
 
+Python Version
+------------------------
+This project is supported on Python versions 2.7 and 3.6.
+
 Quickstart
 ----------
 
@@ -94,9 +98,6 @@ $ zappa deploy
 
 When the process finishes, it will give you the URL of your newly deployed application!
 
-Python Version
-------------------------
-This project is supported on Python version 2.7 and 3.6.
 
 Making Changes 
 --------------
