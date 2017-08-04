@@ -20,5 +20,3 @@ webassets==0.12.1
 Werkzeug==0.12.2
 WTForms==2.1
 zappa==0.43.1
-
--r requirements_test.txt

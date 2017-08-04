@@ -10,7 +10,7 @@ python:
 addons:
   postgresql: "9.4"
 
-install: pip install -r requirements.txt
+install: pip install -r requirements.txt; pip install -r requirements_test.txt;
 
 before_script:
   - psql -c 'create database zappa_boilerplate_test;' -U postgres

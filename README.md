@@ -18,6 +18,7 @@ Quickstart
 $ git clone git@github.com:dtnewman/zappa_boilerplate.git
 $ cd zappa_boilerplate
 $ pip install -r requirements.txt
+$ pip install -r requirements_test.txt  # requirements for running tests
 ```
 
 **Step 2:** Create local and local test databases:
