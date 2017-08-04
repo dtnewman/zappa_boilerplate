@@ -2,7 +2,7 @@
 """Public section, including homepage and signup."""
 from flask import (Blueprint, request, render_template, flash, url_for,
                    redirect, jsonify)
-from flask_login import login_user, login_required, logout_user, current_user
+from flask_login import login_user, login_required, logout_user
 
 from zappa_boilerplate.database import db_session
 from zappa_boilerplate.extensions import login_manager
