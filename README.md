@@ -94,6 +94,10 @@ $ zappa deploy
 
 When the process finishes, it will give you the URL of your newly deployed application!
 
+Python Version
+------------------------
+This project is supported on Python version 2.7 and 3.6.
+
 Making Changes 
 --------------
 If you wish to deploy new changes to your repo simply update the code and then run:
