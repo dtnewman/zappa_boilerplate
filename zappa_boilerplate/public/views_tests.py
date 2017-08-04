@@ -150,8 +150,36 @@ class TestViews(BaseTestCase):
         self.assert404(response)
 
     def test_logout(self):
+        email = 'foo@bar.com'
+        username = 'foofoo'
+        password = 'barbar'
+
+        # register and login first
+        register_form_data = {
+            'username': username,
+            'email': email,
+            'password': password,
+            'confirm': password
+        }
+
+        response = self.client.post('/register', data=register_form_data, follow_redirects=True)
+        self.assert200(response)
+
+        login_form_data = {
+            'username': username,
+            'password': password
+        }
+
+        # test that view redirects
+        response = self.client.post('/', data=login_form_data, follow_redirects=True)
+        self.assert200(response)
+
         response = self.client.get('/logout')
         self.assertStatus(response, 302)
+
+        # login again and test that after redirection, returns 200
+        response = self.client.post('/', data=login_form_data, follow_redirects=True)
+        self.assert200(response)
 
         response = self.client.get('/logout', follow_redirects=True)
         self.assert200(response)

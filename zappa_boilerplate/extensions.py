@@ -4,11 +4,11 @@ Extensions module. Each extension is initialized in the app factory located in a
 """
 
 
-from flask.ext.login import LoginManager
+from flask_login import LoginManager
 login_manager = LoginManager()
 
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
-from flask.ext.migrate import Migrate
+from flask_migrate import Migrate
 migrate = Migrate()

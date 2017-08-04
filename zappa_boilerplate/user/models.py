@@ -1,7 +1,7 @@
 import bcrypt
 import datetime
 import flask
-from flask.ext.login import UserMixin
+from flask_login import UserMixin
 import sqlalchemy
 
 from zappa_boilerplate.database import Base

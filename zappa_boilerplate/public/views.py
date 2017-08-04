@@ -2,7 +2,7 @@
 """Public section, including homepage and signup."""
 from flask import (Blueprint, request, render_template, flash, url_for,
                    redirect, jsonify)
-from flask.ext.login import login_user, login_required, logout_user
+from flask_login import login_user, login_required, logout_user, current_user
 
 from zappa_boilerplate.database import db_session
 from zappa_boilerplate.extensions import login_manager
@@ -44,7 +44,7 @@ def logout():
 
 @blueprint.route("/register", methods=['GET', 'POST'])
 def register():
-    form = RegisterForm(request.form, csrf_enabled=False)
+    form = RegisterForm(request.form)
     if form.validate_on_submit():
         new_user = User(username=form.username.data,
                         email=form.email.data,

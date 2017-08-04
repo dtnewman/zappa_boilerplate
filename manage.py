@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-from flask.ext.script import Manager, Shell, Server
-from flask.ext.migrate import MigrateCommand
+from flask_script import Manager, Shell, Server
+from flask_migrate import MigrateCommand
 
 from zappa_boilerplate.app import create_app
 import zappa_boilerplate.models as models
