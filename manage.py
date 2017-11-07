@@ -7,7 +7,7 @@ from flask_migrate import MigrateCommand
 
 from zappa_boilerplate.app import create_app
 import zappa_boilerplate.models as models
-from zappa_boilerplate.database import db
+from zappa_boilerplate.database import db, db_session
 try:
     import zappa_boilerplate.settings_local as settings
 except ImportError:
@@ -19,6 +19,12 @@ config_object = getattr(settings, env)
 app = create_app(config_object=config_object)
 
 manager = Manager(app)
+
+
+# The following code removes the database session after every request
+@app.teardown_appcontext
+def shutdown_session(exception=None):
+    db_session.remove()
 
 
 def _make_context():
