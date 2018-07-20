@@ -11,7 +11,7 @@ This repo is meant to demonstrate how to setup a **serverless** web application 
 
 Python Version
 --------------
-This project is supported on Python versions 2.7 and 3.6.
+This project is supported on Python version 3.6. I am no longer maintaining support for 2.7.
 
 Quickstart
 ----------
