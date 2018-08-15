@@ -6,7 +6,7 @@
             "env": "Development"
         },
         "exclude": ["settings_local.py"],
-	"profile_name": "default",
+    	"profile_name": "default",
         "project_name": "zappa-boilerplate",
         "remote_env": "s3://zappa-boilerplate-example-bucket/config_secrets.json",
         "runtime": "python3.6",
