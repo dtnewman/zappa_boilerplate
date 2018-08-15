@@ -67,12 +67,3 @@ def about():
 @blueprint.route("/status")
 def status():
     return jsonify({'status': 'ok'})
-
-
-@blueprint.route("/foo")
-def foo():
-    import requests
-    r = requests.get('http://castle.bookxchange.com/status')
-    return jsonify({'status': 'foo', 'external_status': r.json()})
-
-
