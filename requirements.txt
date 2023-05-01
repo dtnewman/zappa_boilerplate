@@ -2,7 +2,7 @@ alembic==1.4.3
 bcrypt==3.2.0
 cssmin==0.2.0
 email-validator==1.1.2
-Flask==1.1.2
+Flask==2.3.2
 Flask-Assets==0.12
 Flask-Login==0.4.1
 Flask-Migrate==2.5.3
