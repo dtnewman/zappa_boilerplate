@@ -2,12 +2,9 @@
 Zappa Boilerplate
 ===================
 
-[![Build Status](https://travis-ci.org/dtnewman/zappa_boilerplate.svg?branch=master)](https://travis-ci.org/dtnewman/zappa_boilerplate) 
 [![Coverage Status](https://coveralls.io/repos/github/dtnewman/zappa_boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dtnewman/zappa_boilerplate?branch=master)
 
 This repo is meant to demonstrate how to setup a **serverless** web application using [Flask](http://flask.pocoo.org/) and [Zappa](https://github.com/Miserlou/Zappa). The code here is a "boilerplate" template for a simple web application with a Postgres database that is meant to be a starting point for more complex projects.
-
-[Click here](https://z8i5eqiawd.execute-api.us-west-2.amazonaws.com/dev) to see a demo of the deployed code (deployed using Zappa).
 
 Python Version
 --------------
